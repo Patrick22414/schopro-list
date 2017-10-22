@@ -9,20 +9,20 @@ class ListNode
 public:
 	ListNode();
 	ListNode(const Node_T& xdata);
-	friend class ListLinked;
+	template< typename List_T > friend class ListLinked;
 private:
 	Node_T data;
 	ListNode* next;
 };
 
 template< typename Node_T >
-ListNode::ListNode()
+ListNode< Node_T >::ListNode()
 {
 	next = NULL;
 }
 
 template< typename Node_T >
-ListNode::ListNode(const Node_T& xdata)
+ListNode< Node_T >::ListNode(const Node_T& xdata)
 {
 	data = xdata;
 	next = NULL;
