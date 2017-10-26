@@ -10,6 +10,8 @@
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
     <File Name="ListLinear.h" ExcludeProjConfig=""/>
+    <File Name="ListLinked.h"/>
+    <File Name="ListNode.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
