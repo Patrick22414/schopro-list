@@ -51,7 +51,7 @@ bool ListLinear< List_T >::isfull() const
 template< typename List_T >
 void ListLinear< List_T >::clear()
 {
-	count == 0;
+	count = 0;
 }
 
 template< typename List_T >
@@ -123,8 +123,9 @@ template< typename List_T >
 void ListLinear< List_T >::display()
 {
 	for (int i=0; i<count; i++) {
-		std::cout << data[i] << '\n';
+		std::cout << data[i] << '\t';
 	}
+	std::cout << '\n';
 }
 
 #endif // LIST_LINEAR_H
