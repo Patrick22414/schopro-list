@@ -17,6 +17,7 @@ public:
 	void clear();
 	void clear(int lastpos);
 	void traverse(void (*fun)(List_T));
+	void display();
 	ErrListLinked retrive(int pos, List_T& xdata) const;
 	ErrListLinked replace(int pos, const List_T& xdata);
 	ErrListLinked remove(int pos, List_T& xdata);
@@ -117,6 +118,16 @@ void ListLinked< List_T >::traverse(void (*fun)(List_T)) {
 		(*fun)(ptr->data);
 		ptr = ptr->next;
 	}
+}
+
+template< typename List_T >
+void ListLinked< List_T >::display() {
+	ListNode< List_T >* ptr = head;
+	while (ptr != NULL) {
+		std::cout << ptr->data << '\t';
+		ptr = ptr->next;
+	}
+	std::cout << '\n';
 }
 
 template< typename List_T >
